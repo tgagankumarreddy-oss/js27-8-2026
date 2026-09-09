@@ -1,0 +1,62 @@
+var or let keywords for variable declaration
+let a=10;
+let b=20;
+var c=a+b;
+document.write(c);\
+
+
+        <table>
+            <tr>
+                <td>
+                <input type="button" value="1" id="1">
+                </td>
+                
+                <td>
+                <input type="button" value="2" id="1">
+                </td>
+                
+                <td>
+                <input type="button" value="3" id="1">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                <input type="button" value="4" id="2">
+                </td>
+                
+                <td>
+                <input type="button" value="5" id="2">
+                </td>
+                
+                <td>
+                <input type="button" value="6" id="2">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                <input type="button" value="7" id="7">
+                </td>
+                
+                <td>
+                <input type="button" value="8" id="8">
+                </td>
+                
+                <td>
+                <input type="button" value="9" id="9">
+                </td>
+
+            </tr>
+            <tr>
+                <td id="+"> 
+                    +
+                </td>
+                <td id="-">
+                    -
+                </td>
+                <td id="*">
+                    *
+                </td>
+            </tr>
+            

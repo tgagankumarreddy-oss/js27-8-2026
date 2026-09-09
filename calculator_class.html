@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>
+            calculator simulator
+        </title>
+        <style>
+            .layer{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                background-color:lightblue;
+            }
+            .internallayer{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:300px;
+                width:250px;
+                background-color:lightgreen;
+                border-radius:10px;
+            }
+            .calculator{
+                display:flex;
+                justify-content:center;
+                flex-direction:column;
+            }
+            .inp{
+                width:75%;
+                height:30px;
+                font-size:20px;
+                justify-content: center;
+                text-align:center;
+                border-radius:5px;  
+                padding-left:10px;
+                background-color: white;
+
+            }
+            .layer2{
+                display:flex;
+                justify-content:center;
+                flex-direction:column;
+                align-items:center;  
+            }
+            #p{
+                font-size:10pz;
+                align-items:center;
+                justify-content:center;
+                background-color:lightblue;
+                padding-left:10px;
+                height:30px;
+            }
+            .set1{
+                display:flex;
+                width:100%;
+                gap: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="layer">
+            <div class="internallayer">
+        <div class="calculator">
+            <div class="layer2">
+            <input class="inp" type="text" id="display" value="0" >
+        
+        <br>
+        <div class="buttons">
+            <div class="submit1">
+            <br>
+            <div class="set1">
+            <button type="submit" id="p" class="clear" onclick="clearDisplay()">C</button>
+            <button type="submit" id="p" onclick="deleteLast()">Back</button>
+            <button type="submit" id="p" class="operator" onclick="appendValue('%')">%</button>
+            <button type="submit" id="p" class="operator" onclick="appendValue('/')">/</button>
+                </div>
+            <br><br>
+            <button type="submit" id="p" onclick="appendValue('7')">7</button>
+            <button type="submit" id="p" onclick="appendValue('8')">8</button>
+            <button type="submit" id="p" onclick="appendValue('9')">9</button>
+            <button type="submit" id="p" class="operator" onclick="appendValue('*')">*</button>
+
+            <br><br>
+            <button type="submit" id="p" onclick="appendValue('4')">4</button>
+            <button type="submit" id="p" onclick="appendValue('5')">5</button>
+            <button type="submit" id="p" onclick="appendValue('6')">6</button>
+            <button type="submit" id="p" class="operator" onclick="appendValue('+')">+</button>
+
+            <br><br>
+            <button type="submit" id="p" onclick="appendValue('1')">1</button>
+            <button type="submit" id="p" onclick="appendValue('2')">2</button>
+            <button type="submit" id="p" onclick="appendValue('3')">3</button>
+            <button type="submit" id="p" class="operator" onclick="appendValue('-')">-</button>
+
+            <br><br>
+            <button type="submit" id="p" onclick="appendValue('0')">0</button>
+            <button type="submit" id="p" onclick="appendValue('.')">.</button>
+            <button type="submit" id="p" class="calculate" onclick="calculate()">=</button>
+                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <script>
+            const disp=document.getElementById("display");
+            function clearDisplay(){
+                disp.value="0";
+            }
+
+            function deleteLast(){
+                if(disp.value.length===1){
+                    disp.value="0";
+                }
+                else{
+                    disp.value=disp.value.slice(0,-1);
+                }
+            }
+
+            function appendValue(value){
+                if(disp.value==="0" && !isNaN(value)){
+                    disp.value=value;
+                }
+                else{
+                    disp.value+=value;
+                }
+            }
+
+            function calculate(){
+                try{
+                    disp.value=eval(disp.value);
+                }
+                catch(error){
+                    disp.value="Error";
+            }        
+        }
+
+        </script>
+    </body>
+</html>

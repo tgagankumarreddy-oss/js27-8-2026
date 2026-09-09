@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            variables js 
+        </title>
+    </head>
+    <body>
+        <label>A=</label>
+        <input type="number" id="text1" placeholder="enter value of variable a:">
+        <br>
+        <label>B=</label>
+        <input type="number" id="text2" placeholder="enter value of  variable b:">
+        <h2>
+            Scripting example
+        </h2>
+
+            <p id="demo1">
+
+            </p>
+            <button type="submit" onclick="clickfun()">clickme</button>
+        <script>
+            function clickfun(){
+            let a=document.getElementById('text1').value;
+            let b=document.getElementById('text2').value;
+            console.log(typeof(a));
+            console.log(typeof(b));
+            // a=Number(a); -- to convert into number can also be done by below 
+            // b=Number(b);
+            console.log(typeof(a));
+            console.log(typeof(b));
+            var c=parseInt(a)+parseInt(b);
+            document.getElementById('demo1').innerHTML='addition of a and b: '+c;
+            }
+            </script>
+    </body>
+</html>
+
+
+basic operations to be completed of + - / * 

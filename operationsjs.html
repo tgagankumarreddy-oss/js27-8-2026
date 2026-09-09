@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            operations of js
+        </title>
+    </head>
+    <body>
+        <h2>
+            operations of javasacript
+        </h2>
+        <label>
+            A:
+        </label>
+        
+        <input type="text" id="text1" placeholder="enter variable a value : ">
+        <br>
+        <br>
+        <label>
+            B:
+        </label>
+        <input type="text" id="text2" placeholder="enter variable b value : ">
+        <br>
+        <br>
+        <script>
+        function fun1(){
+            let a=document.getElementById("text1").value;
+            let b=document.getElementById("text2").value;
+            var add=parseInt(a)+parseInt(b);
+            document.getElementById("demo1").innerHTML='addition of a and b:'+add;
+            var sub=parseInt(a)-parseInt(b);
+            document.getElementById("demo2").innerHTML='Substraction of a and b:'+sub;
+            var mul=parseInt(a)*parseInt(b);
+            document.getElementById("demo3").innerHTML='multiplication of a and b:'+mul;
+            var div=parseInt(a)/parseInt(b);
+            document.getElementById("demo4").innerHTML='division of a and b:'+div;
+                        
+        }
+        </script>
+        <button onclick="fun1()">
+            click me 
+        </button>
+                <p id="demo1">
+
+        </p>
+        <p id="demo2">
+            
+        </p>
+        <p id="demo3">
+
+        </p>
+        <p id="demo4">
+
+        </p>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      justify-content: center;
+      padding-top:150px;
+      background-color: pink;
+    }
+    #counter {
+      font-size: 2em;
+      margin: 20px;
+      
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      border-color: red;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #f9f9f9;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById("counter").innerHTML = count;
+    }
+
+    function decrement() {
+      count--;
+      document.getElementById("counter").innerHTML = count;
+    }
+
+    function reset() {
+      count = 0;
+      document.getElementById("counter").innerHTML = count;
+    }
+  </script>
+  <div class="container">
+    
+  <h2>Simple Counter</h2>
+  <p id="counter">0</p>
+  <button onclick="increment()">📈Increment</button>
+  <button onclick="decrement()">📉Decrement</button>
+  <pre><button onclick="reset()">  🔄Reset</button></pre>
+  </div>
+</body>
+</html>

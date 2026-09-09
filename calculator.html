@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+    </head>
+    <body>
+        <label>
+            Enter a number:
+        </label>
+        <input type="text" id="text1">
+        <br>
+        <label>
+            enter b number:
+        </label>
+        <input type="text" id="text2">
+        <br>
+        <button id="demo1" onclick="addition()">additon</button>
+        <p id="demo1"></p>
+        <button id="demo2" onclick="Substraction()">subtraction</button>
+        <p id="demo2"></p>
+        <button id="demo3" onclick="Multiplication()">multiplication</button>
+        <p id="demo3"></p>
+        <button id="demo4" onclick="Division()">division</button>
+        <p id="demo4"></p>
+        <script>
+            function addition(){
+                var a=Number(document.getElementById('text1').value);
+                var b=Number(document.getElementById('text2').value);
+                var c=a+b;
+                document.getElementById('demo1').innerHTML='addition of a and b: '+c;
+            }
+
+            function Substraction(){
+                var a=Number(document.getElementById('text1').value);
+                var b=Number(document.getElementById('text2').value);
+                var c=a-b;
+                document.getElementById('demo2').innerHTML='substraction of a and b: '+c;
+            }
+            function Multiplication(){
+                var a=Number(document.getElementById('text1').value);
+                var b=Number(document.getElementById('text2').value);
+                var c=a*b;
+                document.getElementById('demo3').innerHTML='multiplication of a and b: '+c;
+            }
+            function Division(){
+                var a=Number(document.getElementById('text1').value);
+                var b=Number(document.getElementById('text2').value);
+                var c=a/b;
+                document.getElementById('demo4').innerHTML='division of a and b: '+c;
+            }
+        </script>
+
+        <p id="temp"></p>
+        
+    </body>
+</html>
